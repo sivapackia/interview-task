@@ -97,8 +97,8 @@ const Home=()=>{
     return(
         <>
         <Box sx={{background:"linear-gradient(#cac531,#f3f9a7)",width:{sx:"100%",xs:"100%",md:"100%"}}}>
-        <Box sx={{width:{sx:"90%",xs:"90%",md:"90%"},display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto",height:"100vh",flexWrap:"wrap"}}>
-            <Box sx={{width:{sx:"100%",xs:"100%",md:"100%"}}}>
+        <Box sx={{width:{sx:"90%",xs:"90%",md:"90%"},display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto",height:{xs:"100%",sm:"100%",md:"100vh"},flexWrap:"wrap",background:"linear-gradient(#cac531,#f3f9a7)"}}>
+            <Box sx={{width:{sx:"100%",xs:"100%",md:"100%"},margin:{xs:"10px",sm:"20px",md:"0px"}}}>
                 <Typography variant="h3" sx={{textAlign:"center",fontWeight:"800"}}>TODO LIST</Typography>
             </Box>
             <Box sx={{width:{sx:"100%",xs:"100%",md:"45%"},margin:{xs:"10px 0px",sm:"10px 0px",md:"0px"}}}>
@@ -114,12 +114,12 @@ const Home=()=>{
                 <Box sx={{display:"flex",alignItems:"center",justifyContent:"center",flexWrap:"wrap",height:"100px"}}>
                        <Typography component="label" sx={{fontWeight:800,fontSize:{md:"30px",xs:"20px",sm:"25px"},color:"black",width:{md:"40%",xs:"40%",sm:"40%"},textAlign:"center"}}>Email :</Typography><br/>
                        <Typography component="input" type="email"  placeholder="Enter The Email Id" sx={{width:{md:"50%",xs:"50%",sm:"50%"},padding:{md:"10px 15px",sm:"10px 10px",xs:"5px 10px"},fontWeight:800,fontSize:{md:"25px",xs:"15px",sm:"25px"},borderRadius:"20px"}} className="Input" name="email" value={email} onChange={Handle}></Typography>
-                       {error && name =="" ?<marquee style={{color:"red",fontWeight:"800"}}>Enter The User Email</marquee>:""}
+                       {error && email =="" ?<marquee style={{color:"red",fontWeight:"800"}}>Enter The User Email</marquee>:""}
                 </Box>
                 <Box sx={{display:"flex",alignItems:"center",justifyContent:"center",flexWrap:"wrap",height:"100px"}}>
                        <Typography component="label" sx={{fontWeight:800,fontSize:{md:"30px",xs:"20px",sm:"25px"},color:"black",width:{md:"40%",xs:"40%",sm:"40%"},textAlign:"center"}}>Password :</Typography><br/>
                        <Typography component="input" type="password"  placeholder="Enter The Password" sx={{width:{md:"50%",xs:"50%",sm:"50%"},padding:{md:"10px 15px",sm:"10px 10px",xs:"5px 10px"},fontWeight:800,fontSize:{md:"25px",xs:"15px",sm:"25px"},borderRadius:"20px"}} className="Input" name="password" value={password} onChange={Handle}></Typography>
-                       {error && name =="" ?<marquee style={{color:"red",fontWeight:"800"}}>Enter The User Password</marquee>:""}
+                       {error && password =="" ?<marquee style={{color:"red",fontWeight:"800"}}>Enter The User Password</marquee>:""}
                 </Box>
                 <Box sx={{marginTop:"30px"}}>
                     {edit ?
