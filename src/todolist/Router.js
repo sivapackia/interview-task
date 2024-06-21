@@ -7,7 +7,7 @@ import TableData from "./Table/Table";
 
 const Router=()=>{
     return(
-        <BrowserRouter>
+        <BrowserRouter  basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/Table" element={<TableData/>}></Route>
